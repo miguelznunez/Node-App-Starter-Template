@@ -1,0 +1,29 @@
+<%- include("partial-views/header.ejs") %>
+<%- include("partial-views/navbar.ejs") %>
+
+  <main class="main">
+    <div class="container">
+
+      <% if(typeof flash !="undefined" && flash !="" ) { %>
+        <br>
+        <div class="server-message error">
+          <%= flash %>
+        </div>
+        <br>
+      <% } else { %>
+          <br>
+          <div class="server-message"></div>
+          <br>
+      <% } %>
+
+      <br>
+      <div class="title">
+        <h2>Home</h2>
+      </div>
+    </div>
+  </main>
+
+  <script src="/js/script.js"></script>
+  <script src="/js/navbar.js"></script>
+
+<%- include("partial-views/footer.ejs") %>
